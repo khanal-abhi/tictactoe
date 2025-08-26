@@ -17,6 +17,7 @@ add_executable(
 
 target_link_libraries(
 	libtictactoe_test
+	tictactoe
 	cmocka
 )
 

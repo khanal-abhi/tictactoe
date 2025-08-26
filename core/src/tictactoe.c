@@ -8,6 +8,9 @@ tictactoe_t* tictactoe_new()
 
 int tictactoe_ctor(tictactoe_t* this)
 {
+	if (this == NULL) {
+		return -ETTT_NULLCTOR;
+	}
 	this->last_player = PLAYER_NONE;
 	for(int row = 0; row < NUM_ROWS; row++) {
 		for(int col = 0; col < NUM_COLS; col++) {
@@ -19,6 +22,10 @@ int tictactoe_ctor(tictactoe_t* this)
 
 int tictactoe_dtor(tictactoe_t* this)
 {
+	if (this == NULL)
+	{
+		return -ETTT_NULLDTOR;
+	}
 	return tictactoe_ctor(this);
 }
 

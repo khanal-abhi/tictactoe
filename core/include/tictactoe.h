@@ -7,6 +7,14 @@
 #define NUM_COLS 3
 
 typedef enum {
+	TTT_OKAY,
+	ETTT_MALLOC,
+	ETTT_FREE,
+	ETTT_NULLCTOR,
+	ETTT_NULLDTOR,
+} tictactoe_error_t;
+
+typedef enum {
 	PLAYER_NONE = 0,
 	PLAYER_O = 1,
 	PLAYER_X = 2,
